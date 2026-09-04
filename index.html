@@ -51,29 +51,51 @@ a:hover{color:#FF7138}
         <a href="#mais-pedidos" style="background:#FFF8E9;color:#530610;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 20px;border-radius:6px;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#FFC735;color:#3F0710" style-active="transform:scale(.97)">Ver os mais pedidos</a>
       </div>
     </div>
+
     <sc-if value="{{ showStrip }}" hint-placeholder-val="{{ true }}">
       <div style="margin-top:52px;overflow-x:auto;overflow-y:hidden;scroll-snap-type:x mandatory;padding:0 20px 40px;-webkit-overflow-scrolling:touch">
+
+        <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
+          <div style="margin:0 0 12px;text-align:right;color:rgba(248,245,233,.58);font-size:9px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap">Arraste para o lado para ver mais</div>
+        </sc-if>
+
         <div style="display:flex;gap:14px;width:max-content;margin:0 auto">
+
           <a href="#mais-pedidos" style="width:168px;flex:0 0 auto;scroll-snap-align:center;border-radius:10px;overflow:hidden;background:#FF7138;display:block;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
-            <div style="aspect-ratio:1/1;overflow:hidden"><img src="img/burger-desfiado.jpg" alt="Hambúrguer artesanal com carne desfiada e queijo derretido do Dom Menu" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div style="aspect-ratio:1/1;overflow:hidden">
+              <img src="img/burger-desfiado.jpg" alt="Hambúrguer artesanal com carne desfiada e queijo derretido do Dom Menu" style="width:100%;height:100%;object-fit:cover" />
+            </div>
             <div style="font-family:Anton,Impact,sans-serif;color:#FFFDF7;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:11px 12px">Burgers</div>
           </a>
+
           <a href="#mais-pedidos" style="width:168px;flex:0 0 auto;scroll-snap-align:center;border-radius:10px;overflow:hidden;background:#71D1E5;display:block;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
-            <div style="aspect-ratio:1/1;overflow:hidden"><img src="img/xis-prato.jpg" alt="Xis artesanal cortado ao meio, recheado de carne, queijo e milho" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div style="aspect-ratio:1/1;overflow:hidden">
+              <img src="img/xis-prato.jpg" alt="Xis artesanal cortado ao meio, recheado de carne, queijo e milho" style="width:100%;height:100%;object-fit:cover" />
+            </div>
             <div style="font-family:Anton,Impact,sans-serif;color:#3F0710;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:11px 12px">Xis</div>
           </a>
+
           <a href="#mais-pedidos" style="width:168px;flex:0 0 auto;scroll-snap-align:center;border-radius:10px;overflow:hidden;background:#FFC735;display:block;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
-            <div style="aspect-ratio:1/1;overflow:hidden"><img src="img/fritas.jpg" alt="Cesta de batata frita crocante com molho" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div style="aspect-ratio:1/1;overflow:hidden">
+              <img src="img/fritas.jpg" alt="Cesta de batata frita crocante com molho" style="width:100%;height:100%;object-fit:cover" />
+            </div>
             <div style="font-family:Anton,Impact,sans-serif;color:#3F0710;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:11px 12px">Porções</div>
           </a>
+
           <a href="#mais-pedidos" style="width:168px;flex:0 0 auto;scroll-snap-align:center;border-radius:10px;overflow:hidden;background:#FFFDF7;display:block;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
-            <div style="aspect-ratio:1/1;overflow:hidden"><img src="img/strogonoff.jpg" alt="Prato de strogonoff com arroz, batata palha e tomate" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div style="aspect-ratio:1/1;overflow:hidden">
+              <img src="img/strogonoff.jpg" alt="Prato de strogonoff com arroz, batata palha e tomate" style="width:100%;height:100%;object-fit:cover" />
+            </div>
             <div style="font-family:Anton,Impact,sans-serif;color:#530610;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:11px 12px">Pratos</div>
           </a>
+
           <a href="#mais-pedidos" style="width:168px;flex:0 0 auto;scroll-snap-align:center;border-radius:10px;overflow:hidden;background:#EC9ACA;display:block;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-4px)">
-            <div style="aspect-ratio:1/1;overflow:hidden"><img src="img/pizza-doce.jpg" alt="Pizza doce com morango, chocolate e confeitos colorodos" style="width:100%;height:100%;object-fit:cover" /></div>
+            <div style="aspect-ratio:1/1;overflow:hidden">
+              <img src="img/pizza-doce.jpg" alt="Pizza doce com morango, chocolate e confeitos colorodos" style="width:100%;height:100%;object-fit:cover" />
+            </div>
             <div style="font-family:Anton,Impact,sans-serif;color:#3F0710;font-size:15px;letter-spacing:.04em;text-transform:uppercase;padding:11px 12px">Doces</div>
           </a>
+
         </div>
       </div>
     </sc-if>
@@ -83,43 +105,60 @@ a:hover{color:#FF7138}
     <div style="width:min(1120px,100%);margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:48px;align-items:center">
       <div>
         <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8D7D70">Sobre a casa</div>
+
         <h2 style="font-family:Anton,Impact,sans-serif;margin:10px 0 0;font-size:clamp(32px,5.2vw,48px);font-weight:400;line-height:.9;letter-spacing:-.03em;text-transform:uppercase;color:#451016">Você escolhe onde<br />vai comer. A gente<br />só quer que coma.</h2>
+
         <p style="margin:20px 0 0;max-width:460px;font-size:15px;line-height:1.6;color:#5c4a44;text-wrap:pretty">Delivery pra quem não quer sair do sofá, retirada pra quem está com pressa e mesa aqui dentro pra quem gosta de comer com o cheiro da chapa por perto. Abrimos todo dia, das 10:30 até 01:00, porque fome de madrugada também é fome.</p>
+
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:14px;margin-top:32px">
+
           <div style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:9px;padding:18px 16px">
             <div style="font-family:Anton,Impact,sans-serif;font-size:20px;color:#530610;text-transform:uppercase;line-height:1">Delivery</div>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Chapecó e região, pedido pelo WhatsApp.</p>
           </div>
+
           <div style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:9px;padding:18px 16px">
             <div style="font-family:Anton,Impact,sans-serif;font-size:20px;color:#530610;text-transform:uppercase;line-height:1">Retirada</div>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Chega, pega e leva ainda quentinho.</p>
           </div>
+
           <div style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:9px;padding:18px 16px">
             <div style="font-family:Anton,Impact,sans-serif;font-size:20px;color:#530610;text-transform:uppercase;line-height:1">No local</div>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Mesa no Centro, na Benjamin Constant.</p>
           </div>
+
         </div>
       </div>
+
       <div style="border-radius:14px;overflow:hidden;aspect-ratio:4/5">
         <img src="img/bowl-carnes.jpg" alt="Bowl com carnes grelhadas, linguiça, arroz e legumes servido no Dom Menu em Chapecó" style="width:100%;height:100%;object-fit:cover" />
       </div>
+
     </div>
   </section>
 
   <section id="mais-pedidos" data-screen-label="Mais pedidos" style="background:#F8F5E9;padding:0 20px 96px;text-align:center">
     <div style="width:min(1120px,100%);margin:0 auto">
+
       <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8D7D70">Mais pedidos</div>
+
       <h2 style="font-family:Anton,Impact,sans-serif;margin:10px 0 0;font-size:clamp(32px,5.2vw,48px);font-weight:400;line-height:.9;letter-spacing:-.03em;text-transform:uppercase;color:#451016">O que sai sem parar</h2>
+
       <p style="margin:12px auto 0;max-width:400px;font-size:13px;line-height:1.5;color:#8D7D70">Uma amostra pequena. O cardápio completo é bem maior que isso.</p>
+
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(232px,1fr));gap:18px;margin-top:44px;text-align:left">
 
         <article style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:10px;overflow:hidden;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-3px)">
-          <div style="aspect-ratio:4/5;overflow:hidden"><img src="img/big-dom-duplo.jpg" alt="Big Dom Duplo, hambúrguer com dois discos de carne, queijo cheddar derretido e bacon" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="aspect-ratio:4/5;overflow:hidden">
+            <img src="img/big-dom-duplo.jpg" alt="Big Dom Duplo, hambúrguer com dois discos de carne, queijo cheddar derretido e bacon" style="width:100%;height:100%;object-fit:cover" />
+          </div>
           <div style="padding:16px">
             <h3 style="margin:0;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#451016">Big Dom Duplo</h3>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Dois discos de carne, queijo derretendo e bacon. Sem frescura nenhuma.</p>
+
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px">
               <span style="font-family:Anton,Impact,sans-serif;font-size:22px;color:#E96A32;letter-spacing:.01em">R$ 19,99</span>
+
               <sc-if value="{{ showAdd }}" hint-placeholder-val="{{ true }}">
                 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir Big Dom Duplo pelo WhatsApp" style="width:28px;height:28px;flex:0 0 auto;background:#530610;color:#FFFDF7;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#390309;color:#FFC735" style-active="transform:scale(.97)">+</a>
               </sc-if>
@@ -128,12 +167,16 @@ a:hover{color:#FF7138}
         </article>
 
         <article style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:10px;overflow:hidden;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-3px)">
-          <div style="aspect-ratio:4/5;overflow:hidden"><img src="img/combo-2-burgers.jpg" alt="Combo com dois hambúrgueres de cheddar e bacon empilhados" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="aspect-ratio:4/5;overflow:hidden">
+            <img src="img/combo-2-burgers.jpg" alt="Combo com dois hambúrgueres de cheddar e bacon empilhados" style="width:100%;height:100%;object-fit:cover" />
+          </div>
           <div style="padding:16px">
             <h3 style="margin:0;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#451016">Combo 2 Burgers</h3>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Dois burgers pra dividir. Ou não, ninguém está olhando.</p>
+
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px">
               <span style="font-family:Anton,Impact,sans-serif;font-size:22px;color:#E96A32;letter-spacing:.01em">R$ 38,99</span>
+
               <sc-if value="{{ showAdd }}" hint-placeholder-val="{{ true }}">
                 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir Combo 2 Burgers pelo WhatsApp" style="width:28px;height:28px;flex:0 0 auto;background:#530610;color:#FFFDF7;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#390309;color:#FFC735" style-active="transform:scale(.97)">+</a>
               </sc-if>
@@ -142,12 +185,16 @@ a:hover{color:#FF7138}
         </article>
 
         <article style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:10px;overflow:hidden;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-3px)">
-          <div style="aspect-ratio:4/5;overflow:hidden"><img src="img/entrevero-xis.jpg" alt="Entrevero Xis Artesanal cortado ao meio com carne, bacon, ovo, queijo e milho" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="aspect-ratio:4/5;overflow:hidden">
+            <img src="img/entrevero-xis.jpg" alt="Entrevero Xis Artesanal cortado ao meio com carne, bacon, ovo, queijo e milho" style="width:100%;height:100%;object-fit:cover" />
+          </div>
           <div style="padding:16px">
             <h3 style="margin:0;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#451016">Entrevero Xis Artesanal</h3>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Carne, bacon, ovo, queijo e mais o que couber dentro do pão.</p>
+
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px">
               <span style="font-family:Anton,Impact,sans-serif;font-size:22px;color:#E96A32;letter-spacing:.01em">R$ 24,99</span>
+
               <sc-if value="{{ showAdd }}" hint-placeholder-val="{{ true }}">
                 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir Entrevero Xis Artesanal pelo WhatsApp" style="width:28px;height:28px;flex:0 0 auto;background:#530610;color:#FFFDF7;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#390309;color:#FFC735" style-active="transform:scale(.97)">+</a>
               </sc-if>
@@ -156,12 +203,16 @@ a:hover{color:#FF7138}
         </article>
 
         <article style="background:#FFFDF7;border:1px solid rgba(80,30,20,.08);border-radius:10px;overflow:hidden;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-3px)">
-          <div style="aspect-ratio:4/5;overflow:hidden"><img src="img/porcoes-frango.jpg" alt="Porção de frango empanado crocante com limão, fritas e calabresa" style="width:100%;height:100%;object-fit:cover" /></div>
+          <div style="aspect-ratio:4/5;overflow:hidden">
+            <img src="img/porcoes-frango.jpg" alt="Porção de frango empanado crocante com limão, fritas e calabresa" style="width:100%;height:100%;object-fit:cover" />
+          </div>
           <div style="padding:16px">
             <h3 style="margin:0;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#451016">Frango Empanado</h3>
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:#8D7D70">Crocante por fora e some da mesa antes de esfriar.</p>
+
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px">
               <span style="font-family:Anton,Impact,sans-serif;font-size:22px;color:#E96A32;letter-spacing:.01em">R$ 21,99</span>
+
               <sc-if value="{{ showAdd }}" hint-placeholder-val="{{ true }}">
                 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir porção de Frango Empanado pelo WhatsApp" style="width:28px;height:28px;flex:0 0 auto;background:#530610;color:#FFFDF7;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#390309;color:#FFC735" style-active="transform:scale(.97)">+</a>
               </sc-if>
@@ -172,13 +223,18 @@ a:hover{color:#FF7138}
         <article style="background:#FFC735;border-radius:10px;overflow:hidden;transition:transform 180ms cubic-bezier(.2,.8,.2,1)" style-hover="transform:translateY(-3px)">
           <div style="aspect-ratio:4/5;display:flex;flex-direction:column;justify-content:center;padding:22px">
             <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(38px,6vw,52px);line-height:.86;letter-spacing:-.03em;text-transform:uppercase;color:#3F0710">Pastel<br />doce ou<br />salgado</div>
+
             <p style="margin:14px 0 0;font-size:12px;line-height:1.45;color:#5c2016;font-weight:600">Feito na hora, massa fininha e sempre queimando a boca.</p>
           </div>
+
           <div style="background:#530610;padding:16px">
             <h3 style="margin:0;font-size:14px;font-weight:800;letter-spacing:.02em;text-transform:uppercase;color:#FFFDF7">Pastel</h3>
+
             <p style="margin:6px 0 0;font-size:11px;line-height:1.45;color:rgba(248,245,233,.7)">Com refrigerante o combo sai por R$ 15,90.</p>
+
             <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:14px">
               <span style="font-family:Anton,Impact,sans-serif;font-size:22px;color:#FFC735;letter-spacing:.01em">R$ 8,99</span>
+
               <sc-if value="{{ showAdd }}" hint-placeholder-val="{{ true }}">
                 <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir pastel pelo WhatsApp" style="width:28px;height:28px;flex:0 0 auto;background:#FFC735;color:#3F0710;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;line-height:1;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#FFFDF7;color:#530610" style-active="transform:scale(.97)">+</a>
               </sc-if>
@@ -187,169 +243,254 @@ a:hover{color:#FF7138}
         </article>
 
       </div>
+
       <div style="margin-top:36px">
         <a href="{{ waMenuHref }}" target="_blank" rel="noopener" style="display:inline-block;border:1px solid #530610;color:#530610;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:12px 20px;border-radius:6px;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#530610;color:#FFFDF7" style-active="transform:scale(.97)">Pedir o cardápio completo</a>
       </div>
+
     </div>
   </section>
 
   <section data-screen-label="Reconhecimento" style="background:#F1EEDF;padding:88px 20px">
     <div style="width:min(1120px,100%);margin:0 auto">
+
       <div style="text-align:center">
         <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8D7D70">Reconhecimento</div>
+
         <h2 style="font-family:Anton,Impact,sans-serif;margin:10px 0 0;font-size:clamp(32px,5.2vw,48px);font-weight:400;line-height:.9;letter-spacing:-.03em;text-transform:uppercase;color:#451016">Nota cheia no Google</h2>
+
         <p style="margin:12px auto 0;max-width:400px;font-size:13px;line-height:1.5;color:#8D7D70">Quem pediu, voltou e avaliou. Os números são esses.</p>
       </div>
+
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-top:44px">
+
         <div style="background:#FF7138;border-radius:10px;padding:28px 20px;text-align:center">
           <div style="font-family:Anton,Impact,sans-serif;font-size:30px;line-height:1;color:#FFFDF7">5,0</div>
           <div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,253,247,.85)">Nota no Google</div>
         </div>
+
         <div style="background:#71D1E5;border-radius:10px;padding:28px 20px;text-align:center">
           <div style="font-family:Anton,Impact,sans-serif;font-size:30px;line-height:1;color:#3F0710">27</div>
           <div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(63,7,16,.7)">Avaliações</div>
         </div>
+
         <div style="background:#FFC735;border-radius:10px;padding:28px 20px;text-align:center">
           <div style="font-family:Anton,Impact,sans-serif;font-size:30px;line-height:1;color:#3F0710">10:30</div>
           <div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(63,7,16,.7)">A chapa acende</div>
         </div>
+
         <div style="background:#EC9ACA;border-radius:10px;padding:28px 20px;text-align:center">
           <div style="font-family:Anton,Impact,sans-serif;font-size:30px;line-height:1;color:#3F0710">01:00</div>
           <div style="margin-top:8px;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(63,7,16,.7)">A chapa descansa</div>
         </div>
+
       </div>
+
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:18px">
+
         <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5">
           <img src="img/burger-bacon.jpg" alt="Hambúrguer alto com três discos de carne, cheddar e bacon crocante" style="width:100%;height:100%;object-fit:cover" />
+
           <div style="position:absolute;left:0;right:0;bottom:0;background:rgba(63,7,16,.62);padding:18px 20px">
             <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(20px,3vw,28px);line-height:.92;text-transform:uppercase;color:#FFFDF7">Bacon nunca<br />foi demais</div>
           </div>
         </div>
+
+        <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5">
+          <img src="img/porcao-carne-batata.jpg" alt="Porção de carne fatiada com batatas rústicas e molho branco" style="width:100%;height:100%;object-fit:cover" />
+        </div>
+
       </div>
     </div>
   </section>
 
   <section id="como-pedir" data-screen-label="Como pedir" style="background:#F8F5E9;padding:88px 20px">
     <div style="width:min(1120px,100%);margin:0 auto">
+
       <div style="text-align:center">
         <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#8D7D70">Como pedir</div>
+
         <h2 style="font-family:Anton,Impact,sans-serif;margin:10px 0 0;font-size:clamp(32px,5.2vw,48px);font-weight:400;line-height:.9;letter-spacing:-.03em;text-transform:uppercase;color:#451016">Três passos e pronto</h2>
+
         <p style="margin:12px auto 0;max-width:400px;font-size:13px;line-height:1.5;color:#8D7D70">Sem cadastro, sem senha, sem app novo no celular.</p>
       </div>
+
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;margin-top:44px">
+
         <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5">
           <img src="img/xis-prato.jpg" alt="Xis artesanal cortado ao meio, recheado de carne, queijo e milho" style="width:100%;height:100%;object-fit:cover" />
+
           <div style="position:absolute;inset:0;background:rgba(63,7,16,.34)"></div>
+
           <div style="position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;justify-content:space-between">
             <div style="font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#FFC735">Passo 01</div>
+
             <div>
               <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,253,247,.85)">Bate o olho no cardápio</div>
               <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(34px,5vw,46px);line-height:.88;text-transform:uppercase;color:#FFC735;margin-top:6px">Escolhe</div>
             </div>
           </div>
         </div>
+
         <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5">
           <img src="img/porcao-carne-batata.jpg" alt="Porção de carne fatiada com batatas rústicas e molho branco" style="width:100%;height:100%;object-fit:cover" />
+
           <div style="position:absolute;inset:0;background:rgba(63,7,16,.34)"></div>
+
           <div style="position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;justify-content:space-between">
             <div style="font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#71D1E5">Passo 02</div>
+
             <div>
               <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,253,247,.85)">Manda no zap o que quer</div>
               <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(34px,5vw,46px);line-height:.88;text-transform:uppercase;color:#71D1E5;margin-top:6px">Pede</div>
             </div>
           </div>
         </div>
+
         <div style="position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5">
           <img src="img/burger-artesanal.jpg" alt="Hambúrguer artesanal com queijo derretido, bacon e alface pronto para comer" style="width:100%;height:100%;object-fit:cover" />
+
           <div style="position:absolute;inset:0;background:rgba(63,7,16,.34)"></div>
+
           <div style="position:absolute;inset:0;padding:22px;display:flex;flex-direction:column;justify-content:space-between">
             <div style="font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:#EC9ACA">Passo 03</div>
+
             <div>
               <div style="font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,253,247,.85)">Guardanapo na mão</div>
               <div style="font-family:Anton,Impact,sans-serif;font-size:clamp(34px,5vw,46px);line-height:.88;text-transform:uppercase;color:#EC9ACA;margin-top:6px">Come</div>
             </div>
           </div>
         </div>
+
       </div>
+
       <div style="background:#530610;border-radius:14px;margin-top:18px;padding:36px 28px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;align-items:center">
+
         <div>
           <h3 style="font-family:Anton,Impact,sans-serif;margin:0;font-size:clamp(26px,4vw,38px);line-height:.9;letter-spacing:-.03em;text-transform:uppercase;color:#FFFDF7">Cardápio inteiro<br />no Anota Ai</h3>
+
           <p style="margin:12px 0 0;max-width:420px;font-size:13px;line-height:1.5;color:rgba(248,245,233,.72)">Burger, pastel, xis, porções e pratos. Pede o link pelo WhatsApp e a gente manda na hora.</p>
         </div>
+
         <div style="display:flex;flex-wrap:wrap;gap:10px;justify-self:end">
           <a href="{{ waHref }}" target="_blank" rel="noopener" style="background:#FF7138;color:#FFFDF7;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 20px;border-radius:6px;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#E85C22;color:#FFFDF7" style-active="transform:scale(.97)">Fazer meu pedido</a>
+
           <a href="{{ waMenuHref }}" target="_blank" rel="noopener" style="background:#FFF8E9;color:#530610;font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:13px 20px;border-radius:6px;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#FFC735;color:#3F0710" style-active="transform:scale(.97)">Receber o cardápio</a>
         </div>
+
       </div>
     </div>
   </section>
 
   <footer data-screen-label="Rodapé" style="background:#390309;padding:72px 20px 40px">
     <div style="width:min(1120px,100%);margin:0 auto">
+
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:36px">
+
         <div>
           <div style="font-family:Anton,Impact,sans-serif;font-size:30px;line-height:1;text-transform:uppercase;color:#FFFDF7">Dom Menu</div>
+
           <p style="margin:12px 0 0;max-width:280px;font-size:12px;line-height:1.55;color:rgba(248,245,233,.6)">Hamburgueria e pastelaria em Chapecó, Santa Catarina. Delivery, retirada e refeição no local.</p>
         </div>
+
         <div>
           <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#FFC735">Onde estamos</div>
+
           <p style="margin:10px 0 0;font-size:13px;line-height:1.6;color:#F8F5E9">Rua Benjamin Constant, 449D<br />Centro, Chapecó, SC<br />89802-200</p>
         </div>
+
         <div>
           <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#FFC735">Horário</div>
+
           <p style="margin:10px 0 0;font-size:13px;line-height:1.6;color:#F8F5E9">Todos os dias<br />10:30 às 01:00</p>
         </div>
+
         <div>
           <div style="font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:#FFC735">Fala com a gente</div>
+
           <div style="display:flex;gap:10px;margin-top:12px">
+
             <a href="{{ waHref }}" target="_blank" rel="noopener" aria-label="Pedir pelo WhatsApp" title="WhatsApp" style="width:42px;height:42px;border-radius:9px;background:#530610;display:flex;align-items:center;justify-content:center;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#FFC735">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFDF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.3L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"></path><path d="M9.2 8.4c.3-.1.6 0 .8.3l.8 1.3c.2.3.1.6-.1.8l-.5.5c.5 1 1.3 1.8 2.3 2.3l.5-.5c.2-.2.5-.3.8-.1l1.3.8c.3.2.4.5.3.8-.3.8-1.1 1.3-2 1.2a7.3 7.3 0 0 1-6-6c-.1-.9.4-1.7 1.2-2Z"></path></svg>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFDF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M20.5 11.6a8.4 8.4 0 0 1-12.4 7.3L3.5 20.5l1.6-4.5A8.4 8.4 0 1 1 20.5 11.6Z"></path>
+                <path d="M9.2 8.4c.3-.1.6 0 .8.3l.8 1.3c.2.3.1.6-.1.8l-.5.5c.5 1 1.3 1.8 2.3 2.3l.5-.5c.2-.2.5-.3.8-.1l1.3.8c.3.2.4.5.3.8-.3.8-1.1 1.3-2 1.2a7.3 7.3 0 0 1-6-6c-.1-.9.4-1.7 1.2-2Z"></path>
+              </svg>
             </a>
+
             <a href="https://www.instagram.com/dommenuchapeco/" target="_blank" rel="noopener" aria-label="Instagram do Dom Menu" title="Instagram" style="width:42px;height:42px;border-radius:9px;background:#530610;display:flex;align-items:center;justify-content:center;transition:all 180ms cubic-bezier(.2,.8,.2,1)" style-hover="background:#FFC735">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFDF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect><circle cx="12" cy="12" r="4"></circle><circle cx="17" cy="7" r="1.1" fill="#FFFDF7" stroke="none"></circle></svg>
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#FFFDF7" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="3.5" y="3.5" width="17" height="17" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle cx="17" cy="7" r="1.1" fill="#FFFDF7" stroke="none"></circle>
+              </svg>
             </a>
+
           </div>
         </div>
+
       </div>
+
       <div style="margin-top:48px;padding-top:20px;border-top:1px solid rgba(248,245,233,.12);display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between">
         <span style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,245,233,.4)">Dom Menu Chapecó</span>
         <span style="font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:rgba(248,245,233,.4)">Site demonstrativo por Tessura</span>
       </div>
+
     </div>
   </footer>
 
   <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
     <div style="position:fixed;left:0;right:0;bottom:0;z-index:60;background:#530610;padding:10px 14px;display:flex;gap:10px;align-items:center;border-top:1px solid rgba(248,245,233,.14)">
+
       <a href="{{ waHref }}" target="_blank" rel="noopener" style="flex:1 1 auto;background:#FF7138;color:#FFFDF7;font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:15px 16px;border-radius:6px;text-align:center" style-active="transform:scale(.98)">Pedir no WhatsApp</a>
+
       <a href="tel:+5549999593222" aria-label="Ligar para o Dom Menu" style="width:48px;height:48px;flex:0 0 auto;background:#FFC735;border-radius:6px;display:flex;align-items:center;justify-content:center">
-        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#3F0710" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.2 4h-3a1.2 1.2 0 0 0-1.2 1.3 15 15 0 0 0 14.7 14.7A1.2 1.2 0 0 0 20 18.8v-3l-4-1.4-1.9 1.9a11.6 11.6 0 0 1-4.6-4.6L11.4 10Z"></path></svg>
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#3F0710" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8.2 4h-3a1.2 1.2 0 0 0-1.2 1.3 15 15 0 0 0 14.7 14.7A1.2 1.2 0 0 0 20 18.8v-3l-4-1.4-1.9 1.9a11.6 11.6 0 0 1-4.6-4.6L11.4 10Z"></path>
+        </svg>
       </a>
+
     </div>
   </sc-if>
+
   <sc-if value="{{ mobile }}" hint-placeholder-val="{{ false }}">
     <div style="height:76px"></div>
   </sc-if>
 
 </div>
 </x-dc>
+
 <script type="text/x-dc" data-dc-script data-props="{&quot;whatsappMessage&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;Oi! Vim pelo site do Dom Menu e quero fazer um pedido.&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Pedido&quot;},&quot;showAddButtons&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Vitrine&quot;},&quot;showCategoryStrip&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Vitrine&quot;}}">
 class Component extends DCLogic {
   state = { mobile: false };
 
   componentDidMount() {
     document.title = 'Dom Menu Chapecó | Burger, pastel e pizza com delivery até 01:00';
+
     const setMeta = (name, content) => {
       let m = document.head.querySelector('meta[name="' + name + '"]');
-      if (!m) { m = document.createElement('meta'); m.setAttribute('name', name); document.head.appendChild(m); }
+
+      if (!m) {
+        m = document.createElement('meta');
+        m.setAttribute('name', name);
+        document.head.appendChild(m);
+      }
+
       m.setAttribute('content', content);
     };
+
     setMeta('viewport', 'width=device-width, initial-scale=1');
-    setMeta('description', 'Hamburgueria e pastelaria em Chapecó, SC. Big Dom Duplo, xis artesanal, pastel, pizza e porções com delivery, retirada e refeição no local, todo dia das 10:30 à 01:00.');
+
+    setMeta(
+      'description',
+      'Hamburgueria e pastelaria em Chapecó, SC. Big Dom Duplo, xis artesanal, pastel, pizza e porções com delivery, retirada e refeição no local, todo dia das 10:30 à 01:00.'
+    );
 
     if (!document.getElementById('ld-dom-menu')) {
       const s = document.createElement('script');
+
       s.type = 'application/ld+json';
       s.id = 'ld-dom-menu';
+
       s.textContent = JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'FastFoodRestaurant',
@@ -358,6 +499,7 @@ class Component extends DCLogic {
         servesCuisine: ['Hamburgueria', 'Pastelaria', 'Pizza'],
         priceRange: 'R$',
         telephone: '+55 49 99959-3222',
+
         address: {
           '@type': 'PostalAddress',
           streetAddress: 'Rua Benjamin Constant',
@@ -366,28 +508,60 @@ class Component extends DCLogic {
           postalCode: '89802-200',
           addressCountry: 'BR'
         },
+
         openingHoursSpecification: [{
           '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'],
+          dayOfWeek: [
+            'Monday',
+            'Tuesday',
+            'Wednesday',
+            'Thursday',
+            'Friday',
+            'Saturday',
+            'Sunday'
+          ],
           opens: '10:30',
           closes: '01:00'
         }],
-        aggregateRating: { '@type': 'AggregateRating', ratingValue: '5', reviewCount: '27', bestRating: '5' },
-        sameAs: ['https://www.instagram.com/dommenuchapeco/'],
-        hasDeliveryMethod: ['http://purl.org/goodrelations/v1#DeliveryModeOwnFleet'],
+
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5',
+          reviewCount: '27',
+          bestRating: '5'
+        },
+
+        sameAs: [
+          'https://www.instagram.com/dommenuchapeco/'
+        ],
+
+        hasDeliveryMethod: [
+          'http://purl.org/goodrelations/v1#DeliveryModeOwnFleet'
+        ],
+
         acceptsReservations: 'False'
       });
+
       document.head.appendChild(s);
     }
 
     this._mq = window.matchMedia('(max-width: 760px)');
-    this._onMq = () => this.setState({ mobile: this._mq.matches });
+
+    this._onMq = () => this.setState({
+      mobile: this._mq.matches
+    });
+
     this._onMq();
-    if (this._mq.addEventListener) this._mq.addEventListener('change', this._onMq);
+
+    if (this._mq.addEventListener) {
+      this._mq.addEventListener('change', this._onMq);
+    }
   }
 
   componentWillUnmount() {
-    if (this._mq && this._mq.removeEventListener) this._mq.removeEventListener('change', this._onMq);
+    if (this._mq && this._mq.removeEventListener) {
+      this._mq.removeEventListener('change', this._onMq);
+    }
   }
 
   wa(text) {
@@ -395,7 +569,10 @@ class Component extends DCLogic {
   }
 
   renderVals() {
-    const msg = this.props.whatsappMessage ?? 'Oi! Vim pelo site do Dom Menu e quero fazer um pedido.';
+    const msg =
+      this.props.whatsappMessage ??
+      'Oi! Vim pelo site do Dom Menu e quero fazer um pedido.';
+
     return {
       mobile: this.state.mobile,
       showNav: !this.state.mobile,
@@ -407,5 +584,6 @@ class Component extends DCLogic {
   }
 }
 </script>
+
 </body>
 </html>
